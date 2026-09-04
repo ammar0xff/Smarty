@@ -6,7 +6,7 @@
 
 Control ESP32 relays remotely through Firebase Realtime Database.
 
-[![CI](https://github.com/ammar0xff/smarty/actions/workflows/ci.yml/badge.svg)](https://github.com/ammar0xff/smarty/actions/workflows/ci.yml)
+[![CI](https://github.com/ammar0xff/Smarty/actions/workflows/ci.yml/badge.svg)](https://github.com/ammar0xff/Smarty/actions/workflows/ci.yml)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
 ![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?logo=firebase)
@@ -28,7 +28,7 @@ Web Dashboard  →  Firebase RTDB  →  ESP32 subscribes  →  Relay ON/OFF
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/ammar0xff/smarty.git
+git clone https://github.com/ammar0xff/Smarty.git
 cd smarty
 npm install
 ```
