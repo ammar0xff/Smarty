@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" font-family="monospace">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="520" rx="12" fill="#0d1117"/>
+  <text x="410" y="36" text-anchor="middle" fill="#7d8590" font-size="13" font-weight="600" letter-spacing="2">TIBA-DOOR CIRCUIT</text>
+
+  <!-- ====== ESP32 ====== -->
+  <rect x="40" y="140" width="140" height="260" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="110" y="168" text-anchor="middle" fill="#00adb5" font-size="12" font-weight="700">ESP32</text>
+  <text x="110" y="183" text-anchor="middle" fill="#7d8590" font-size="9">DevKit V1</text>
+
+  <!-- Pin labels left -->
+  <text x="52" y="230" fill="#7d8590" font-size="9">3V3</text>
+  <text x="52" y="262" fill="#7d8590" font-size="9">GND</text>
+  <text x="52" y="302" fill="#7d8590" font-size="9">D26</text>
+  <text x="52" y="342" fill="#7d8590" font-size="9">D27</text>
+
+  <!-- Pin dots -->
+  <circle cx="68" cy="227" r="4" fill="#f0c040"/>
+  <circle cx="68" cy="259" r="4" fill="#7d8590"/>
+  <circle cx="68" cy="299" r="4" fill="#3fb950" filter="url(#glow)"/>
+  <circle cx="68" cy="339" r="4" fill="#58a6ff" filter="url(#glow)"/>
+
+  <!-- Pin labels right -->
+  <text x="155" y="230" fill="#7d8590" font-size="9" text-anchor="end">VIN</text>
+  <text x="155" y="262" fill="#7d8590" font-size="9" text-anchor="end">GND</text>
+
+  <circle cx="142" cy="227" r="4" fill="#f85149"/>
+  <circle cx="142" cy="259" r="4" fill="#7d8590"/>
+
+  <!-- ====== RELAY 1 ====== -->
+  <g transform="translate(310, 100)">
+    <rect x="0" y="0" width="180" height="150" rx="8" fill="#161b22" stroke="#00adb5" stroke-width="1.5"/>
+    <text x="90" y="24" text-anchor="middle" fill="#00adb5" font-size="11" font-weight="700">RELAY MODULE 1</text>
+    <text x="90" y="40" text-anchor="middle" fill="#7d8590" font-size="9">LED Light</text>
+
+    <!-- Relay box -->
+    <rect x="55" y="52" width="70" height="40" rx="4" fill="#0d1117" stroke="#30363d"/>
+    <text x="90" y="77" text-anchor="middle" fill="#e6edf3" font-size="10">K1</text>
+
+    <!-- COM / NO / NC terminals -->
+    <text x="30" y="110" fill="#3fb950" font-size="9">IN</text>
+    <text x="72" y="110" fill="#f85149" font-size="9">VCC</text>
+    <text x="110" y="110" fill="#7d8590" font-size="9">GND</text>
+
+    <circle cx="30" cy="120" r="4" fill="#3fb950"/>
+    <circle cx="72" cy="120" r="4" fill="#f85149"/>
+    <circle cx="110" cy="120" r="4" fill="#7d8590"/>
+
+    <!-- Output terminals -->
+    <text x="40" y="145" fill="#f0c040" font-size="8">COM</text>
+    <text x="80" y="145" fill="#3fb950" font-size="8">NO</text>
+    <text x="125" y="145" fill="#f85149" font-size="8">NC</text>
+  </g>
+
+  <!-- ====== RELAY 2 ====== -->
+  <g transform="translate(310, 280)">
+    <rect x="0" y="0" width="180" height="150" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+    <text x="90" y="24" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="700">RELAY MODULE 2</text>
+    <text x="90" y="40" text-anchor="middle" fill="#7d8590" font-size="9">Secondary Relay</text>
+
+    <!-- Relay box -->
+    <rect x="55" y="52" width="70" height="40" rx="4" fill="#0d1117" stroke="#30363d"/>
+    <text x="90" y="77" text-anchor="middle" fill="#e6edf3" font-size="10">K2</text>
+
+    <!-- Input terminals -->
+    <text x="30" y="110" fill="#58a6ff" font-size="9">IN</text>
+    <text x="72" y="110" fill="#f85149" font-size="9">VCC</text>
+    <text x="110" y="110" fill="#7d8590" font-size="9">GND</text>
+
+    <circle cx="30" cy="120" r="4" fill="#58a6ff"/>
+    <circle cx="72" cy="120" r="4" fill="#f85149"/>
+    <circle cx="110" cy="120" r="4" fill="#7d8590"/>
+
+    <!-- Output terminals -->
+    <text x="40" y="145" fill="#f0c040" font-size="8">COM</text>
+    <text x="80" y="145" fill="#3fb950" font-size="8">NO</text>
+    <text x="125" y="145" fill="#f85149" font-size="8">NC</text>
+  </g>
+
+  <!-- ====== POWER SUPPLY ====== -->
+  <g transform="translate(640, 170)">
+    <rect x="0" y="0" width="130" height="100" rx="8" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+    <text x="65" y="24" text-anchor="middle" fill="#f85149" font-size="11" font-weight="700">5V POWER</text>
+    <text x="65" y="40" text-anchor="middle" fill="#7d8590" font-size="9">USB or Adapter</text>
+
+    <text x="30" y="72" fill="#f85149" font-size="9">+5V</text>
+    <text x="90" y="72" fill="#7d8590" font-size="9">GND</text>
+
+    <circle cx="30" cy="82" r="5" fill="#f85149" filter="url(#glow)"/>
+    <circle cx="90" cy="82" r="5" fill="#7d8590"/>
+  </g>
+
+  <!-- ====== LOAD ====== -->
+  <g transform="translate(640, 320)">
+    <rect x="0" y="0" width="130" height="80" rx="8" fill="#161b22" stroke="#f0c040" stroke-width="1.5"/>
+    <text x="65" y="24" text-anchor="middle" fill="#f0c040" font-size="11" font-weight="700">LOAD</text>
+    <text x="65" y="40" text-anchor="middle" fill="#7d8590" font-size="9">LED / Bulb / Motor</text>
+    <text x="65" y="62" text-anchor="middle" fill="#f0c040" font-size="9">⚡ Rated 250V / 10A</text>
+  </g>
+
+  <!-- ====== WIRING ====== -->
+
+  <!-- ESP32 3V3 → Relay VCC (both) -->
+  <path d="M 68 227 L 68 200 Q 68 195 73 195 L 260 195 Q 265 195 265 200 L 265 220 Q 265 225 270 225 L 370 225" fill="none" stroke="#f85149" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+  <text x="200" y="192" fill="#f85149" font-size="8" opacity="0.7">3.3V (logic only)</text>
+
+  <!-- ESP32 GND → Relay GND (both) -->
+  <path d="M 68 259 L 68 270 Q 68 275 73 275 L 260 275 Q 265 275 265 280 L 265 220" fill="none" stroke="#7d8590" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="265" y1="280" x2="265" y2="400" stroke="#7d8590" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- ESP32 D26 → Relay 1 IN -->
+  <path d="M 68 299 L 280 299 Q 285 299 285 304 L 285 230 Q 285 225 290 225 L 330 225" fill="none" stroke="#3fb950" stroke-width="2" filter="url(#glow)"/>
+  <text x="180" y="295" fill="#3fb950" font-size="8" font-weight="600">GPIO 26 → press1</text>
+
+  <!-- ESP32 D27 → Relay 2 IN -->
+  <path d="M 68 339 L 280 339 Q 285 339 285 344 L 285 400 Q 285 405 290 405 L 330 405" fill="none" stroke="#58a6ff" stroke-width="2" filter="url(#glow)"/>
+  <text x="180" y="335" fill="#58a6ff" font-size="8" font-weight="600">GPIO 27 → press2</text>
+
+  <!-- 5V → Relay 1 VCC -->
+  <path d="M 640 252 L 440 252 Q 435 252 435 247 L 435 225 Q 435 220 430 220 L 382 220" fill="none" stroke="#f85149" stroke-width="2"/>
+  <text x="520" y="248" fill="#f85149" font-size="8">5V</text>
+
+  <!-- 5V → Relay 2 VCC -->
+  <path d="M 640 252 L 440 252 Q 435 252 435 257 L 435 400 Q 435 405 430 405 L 382 405" fill="none" stroke="#f85149" stroke-width="2"/>
+  <text x="445" y="340" fill="#f85149" font-size="8">5V</text>
+
+  <!-- GND bus -->
+  <path d="M 640 252 L 705 252 L 705 260" fill="none" stroke="#7d8590" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="435" y1="240" x2="435" y2="260" stroke="#7d8590" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="435" y1="400" x2="435" y2="420" stroke="#7d8590" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Relay 1 NO → Load → 5V return -->
+  <path d="M 490 225 L 530 225 Q 535 225 535 230 L 535 360 Q 535 365 540 365 L 630 365" fill="none" stroke="#f0c040" stroke-width="2"/>
+  <text x="530" y="300" fill="#f0c040" font-size="8" transform="rotate(90 530 300)">NO</text>
+
+  <!-- Legend -->
+  <g transform="translate(40, 440)">
+    <rect x="0" y="0" width="740" height="55" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="20" y="20" fill="#7d8590" font-size="9" font-weight="600">LEGEND</text>
+    <line x1="20" y1="35" x2="45" y2="35" stroke="#3fb950" stroke-width="2"/>
+    <text x="50" y="38" fill="#7d8590" font-size="8">GPIO Signal (relay trigger)</text>
+    <line x1="220" y1="35" x2="245" y2="35" stroke="#f85149" stroke-width="2"/>
+    <text x="250" y="38" fill="#7d8590" font-size="8">5V Power</text>
+    <line x1="350" y1="35" x2="375" y2="35" stroke="#7d8590" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="380" y="38" fill="#7d8590" font-size="8">Ground</text>
+    <line x1="480" y1="35" x2="505" y2="35" stroke="#f0c040" stroke-width="2"/>
+    <text x="510" y="38" fill="#7d8590" font-size="8">Load circuit</text>
+    <line x1="620" y1="35" x2="645" y2="35" stroke="#58a6ff" stroke-width="2"/>
+    <text x="650" y="38" fill="#7d8590" font-size="8">Relay 2 signal</text>
+  </g>
+</svg>

@@ -55,6 +55,19 @@ npm run dev
 
 Open **http://localhost:5173** — click a button, the ESP32 relay activates.
 
+## Circuit Diagram
+
+![Circuit](public/circuit.svg)
+
+| ESP32 Pin | Relay 1 | Relay 2 |
+|-----------|---------|---------|
+| GPIO 26   | IN      |         |
+| GPIO 27   |         | IN      |
+| 3V3       | VCC     | VCC     |
+| GND       | GND     | GND     |
+
+**Load side:** Each relay's COM and NO terminals connect to your load (LED, bulb, motor). The relay switches the live wire on/off when activated.
+
 ## ESP32 Setup
 
 Install the Firebase Arduino library on your ESP32 and subscribe to the relay paths:
