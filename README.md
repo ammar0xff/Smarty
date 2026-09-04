@@ -59,14 +59,32 @@ Open **http://localhost:5173** — click a button, the ESP32 relay activates.
 
 ![Circuit](public/circuit.svg)
 
-| ESP32 Pin | Relay 1 | Relay 2 |
-|-----------|---------|---------|
-| GPIO 26   | IN      |         |
-| GPIO 27   |         | IN      |
-| 3V3       | VCC     | VCC     |
-| GND       | GND     | GND     |
+### Control wiring (logic side)
 
-**Load side:** Each relay's COM and NO terminals connect to your load (LED, bulb, motor). The relay switches the live wire on/off when activated.
+| ESP32 Pin | Component | Signal |
+|-----------|-----------|--------|
+| GPIO 26   | R1 → Q1 base   | Relay 1 trigger (`press1`) |
+| GPIO 27   | R2 → Q2 base   | Relay 2 trigger (`press2`) |
+| GND       | Q1/Q2 emitter | Ground rail |
+| 5V (VIN)  | K1/K2 coil, D1/D2 | 5V power rail |
+
+### Power / output wiring (load side)
+
+| From | To | Note |
+|------|----|------|
+| AC Live | Relay COM (both) | switched wire |
+| Relay NO | Load (L1, L2) | load returns to Neutral |
+| Hi-Link HLK-PM01 | 5V bus + GND | isolated AC-DC supply |
+| F1 (1A) | between 5V & VIN | fuse protection |
+
+### Production component notes
+
+- **Relays** — Songle `SRD-05VDC-SL-C`: 5V coil, SPDT, rated **10A @ 250VAC**. Use the **NO** contact to switch the live wire only; never switch neutral.
+- **Transistors** — `2N2222A` NPN: the ESP32's 3.3V GPIO **cannot** drive a 5V relay coil directly. The transistor inverts/switches the ~72mA coil current; coil resistance ~70Ω.
+- **Flyback diodes** — `1N4007` **across the coil** (cathode to 5V, anode to collector) — required to clamp the inductive spike when the coil de-energizes, otherwise Q1/Q2 die instantly.
+- **Base resistors** — `1kΩ` limit GPIO current to ~2.3mA (safe for the ESP32's ~40mA max per pin). Confirms the 5V logic level.
+- **Power supply** — Hi-Link `HLK-PM01` (AC 85–265V → 5V DC, isolated). Do **not** power relays from the ESP32's on-board 3.3V regulator — it cannot source the coil current.
+- **Decoupling** — `470µF` electrolytic bulk + `0.1µF` ceramic on the 5V rail to absorb coil switching transients and prevent brownouts.
 
 ## ESP32 Setup
 
