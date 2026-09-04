@@ -8,7 +8,7 @@
 
   <!-- Background -->
   <rect width="1100" height="820" rx="12" fill="#0d1117"/>
-  <text x="550" y="34" text-anchor="middle" fill="#7d8590" font-size="14" font-weight="600" letter-spacing="3">TIBA-DOOR PRODUCTION CIRCUIT</text>
+  <text x="550" y="34" text-anchor="middle" fill="#7d8590" font-size="14" font-weight="600" letter-spacing="3">SMARTY PRODUCTION CIRCUIT</text>
   <text x="550" y="52" text-anchor="middle" fill="#484f58" font-size="10">2-Channel Relay Driver · Isolated Control · Flyback Protected</text>
 
   <!-- ====== POWER INPUT ====== -->

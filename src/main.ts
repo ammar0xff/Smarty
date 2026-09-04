@@ -74,7 +74,7 @@ function renderLog(): string {
 function render(): void {
   document.getElementById("app")!.innerHTML = `
     <div class="header">
-      <h1>Tiba Door</h1>
+      <h1>Smarty</h1>
       <p>ESP32 Cloud Command Center</p>
       ${renderStatus()}
     </div>

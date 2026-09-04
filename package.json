@@ -1,5 +1,5 @@
 {
-  "name": "tiba-door",
+  "name": "smarty",
   "version": "1.0.0",
   "description": "ESP32 Cloud Command Center — control relays remotely via Firebase",
   "type": "module",
